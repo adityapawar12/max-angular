@@ -1,1 +1,1 @@
-# getting started section.
+# GETTING STARTED.
