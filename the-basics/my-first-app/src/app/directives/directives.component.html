@@ -1,0 +1,24 @@
+<!-- DIRECTIVES ASSIGNMENT. -->
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onClick()">
+        Display Details
+      </button>
+      <p *ngIf="displayPassword">Secret password = tuna</p>
+    </div>
+  </div>
+  <div class="row">
+    <!-- USING I AS AN AUTO INCREMENTING INDEX FROM 0. -->
+    <div
+      class="col-xs-12"
+      *ngFor="let logItem of log; let i = index"
+      [ngStyle]="{
+        backgroundColor: i >= 4 ? 'blue' : 'transparent'
+      }"
+      [ngClass]="{ 'para-color': i >= 4 }"
+    >
+      <p>CLICKED ON {{ logItem }}</p>
+    </div>
+  </div>
+</div>
