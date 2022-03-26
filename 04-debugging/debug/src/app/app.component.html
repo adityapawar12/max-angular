@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>My Servers</h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <button (click)="onAddServer()" class="btn btn-lg btn-primary">Add Server</button>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group" *ngFor="let server of servers; let i = index">
+        <li class="list-group-item"><a (click)="onRemoveServer(i)">{{ i + 1 }}. {{ server }}</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
