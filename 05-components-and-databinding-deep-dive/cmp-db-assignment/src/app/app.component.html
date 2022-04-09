@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+      <app-game-control (incrementer)="getIncrementer($event)"></app-game-control>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col py-2" *ngFor="let item of evenList">
+          <app-even>{{ item }}</app-even>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="row">
+        <div class="col py-2" *ngFor="let item of oddList">
+          <app-odd>{{ item }}</app-odd>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
