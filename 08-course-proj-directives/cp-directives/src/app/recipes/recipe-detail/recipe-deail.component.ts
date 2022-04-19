@@ -1,4 +1,4 @@
-import { Component , OnInit, Input } from "@angular/core";
+import { Component , OnInit, Input, ElementRef } from "@angular/core";
 
 @Component({
     selector: "app-recipe-detail",
@@ -8,9 +8,21 @@ import { Component , OnInit, Input } from "@angular/core";
 
 export class RecipeDetailComponent implements OnInit {
     @Input() recipe: any;
+    count: number = 0; 
 
-    constructor() {}
+    constructor(private elRef: ElementRef) {}
 
     ngOnInit() {}
+
+    onClickDropdown(value: any) {
+        // console.log(value.style.display);
+        console.log(value);
+        this.count++
+        if(this.count % 2 == 0) {
+            value.style.display = 'none';
+        } else {
+            value.style.display = 'block';
+        } 
+    }
 }
 
